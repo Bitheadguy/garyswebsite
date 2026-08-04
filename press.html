@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="1131 Press, the independent publishing imprint of Warren G. Harper.">
+<title>1131 Press | Warren G. Harper</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="press-body"><header class="site-header">
+  <a class="site-name" href="index.html">WARREN G. HARPER</a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav">Menu</button>
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="code.html">The Code Redeemer</a>
+    <a href="wormy.html">Worm Jokes</a>
+    <a href="discoveries.html">Discoveries</a>
+    <a class="active" href="press.html">1131 Press</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  <button id="globalSoundToggle" class="nav-button" type="button">Sound: On</button></nav>
+</header>
+<main><section class="press-hero"><div class="press-mark"><span>1131</span><strong>PRESS</strong></div><p>Independent Publishing</p><h1>Stories. Humor. Insights.</h1>
+<p class="press-mission">At 1131 PRESS, we believe the most interesting things are often hidden beneath the surface. Through fiction, humor, and Scripture, each project is created to entertain, challenge, and inspire readers to look a little deeper.</p></section>
+<section class="press-catalog">
+<article class="press-title-card code-card-press"><p class="page-kicker red">A NEAR-FUTURE SPECULATIVE THRILLER</p><h2>The Code Redeemer</h2>
+<p>In a future where artificial intelligence has become the ultimate authority, one systems engineer uncovers a hidden truth buried within the system he helped maintain. As personal freedom quietly disappears, he must decide what he is willing to risk before humanity loses the ability to choose for itself.</p>
+<strong>Status: Seeking representation and publication.</strong><a href="code.html">Explore the novel →</a></article>
+<article class="press-title-card worm-card-press"><p class="page-kicker blue">SINGLE-PANEL CARTOONS</p><h2>Wormy &amp; Friends</h2><h3>Worm Jokes</h3>
+<p>A collection of hand-drawn cartoons following Wormy and his friends through work, family, church, sports, holidays, relationships, and life’s everyday absurdities. Sometimes clever. Sometimes deadpan. Sometimes wonderfully ridiculous.</p>
+<strong>Status: Seeking publication.</strong><a href="wormy.html">Enter Wormy’s world →</a></article>
+<article class="press-title-card insight-card-press"><p class="page-kicker gold">A BOOK OF DISCOVERY</p><h2>I Never Noticed That Before!</h2>
+<h3>90 Days of Discovering Overlooked Truths in Scripture Through the Eyes of an Engineer</h3>
+<p>A book for readers who want to dig deeper into familiar Scripture, sharing Warren Harper’s personal discoveries from God’s Word through the eyes of an engineer.</p>
+
+<strong>Status: Currently in development.</strong><a href="discoveries.html">Discover the devotional →</a></article>
+</section>
+<section class="why-1131"><div><p class="page-kicker">WHY 1131?</p><h2>A name rooted in Hebrews 11:31.</h2></div>
+<div><p>The name 1131 PRESS comes from Hebrews 11:31. It is a reminder that faith can transform a life and that God often works through unexpected people and unexpected circumstances.</p>
+<p>While each project is different, every book published under 1131 PRESS shares the same purpose: to encourage readers to discover what may be hidden beneath the surface.</p></div></section></main><footer class="global-footer">
+  <div>
+    <strong>Discover what’s hidden beneath the surface.</strong>
+    <span>© <span class="current-year">2026</span> Warren G. Harper</span>
+  </div>
+  <a class="press-footer" href="press.html"><span>Published by</span><strong>1131 PRESS</strong></a>
+</footer>
+<script>
+document.querySelectorAll('.current-year').forEach(el => el.textContent = new Date().getFullYear());
+const menu = document.querySelector('.menu-toggle');
+const nav = document.getElementById('mainNav');
+if (menu && nav) menu.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menu.setAttribute('aria-expanded', String(open));
+});
+</script>
+<div id="easterModal" class="easter-modal" hidden>
+  <div class="easter-card">
+    <button id="closeEaster" class="close-easter" type="button" aria-label="Close">×</button>
+    <div id="easterContent"></div>
+  </div>
+</div>
+<div id="luciWhisper" class="luci-whisper" aria-hidden="true">WHO IS THIS?<br>ARE YOU ONLINE?</div>
+<button id="finalDiscovery" class="final-discovery" type="button">Some things are meant to be discovered.</button>
+
+<!-- Some things are meant to be discovered. -->
+<script src="easter-eggs.js"></script>
+<script>
+const gst=document.getElementById("globalSoundToggle");
+let siteSound=localStorage.getItem("projectLaunchSound")!=="off";
+if(gst){
+  gst.textContent=`Sound: ${siteSound?"On":"Off"}`;
+  gst.addEventListener("click",()=>{
+    siteSound=!siteSound;
+    localStorage.setItem("projectLaunchSound",siteSound?"on":"off");
+    gst.textContent=`Sound: ${siteSound?"On":"Off"}`;
+  });
+}
+</script>
+</body></html>

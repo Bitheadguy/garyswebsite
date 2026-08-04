@@ -1,0 +1,95 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Original hand-drawn Worm Jokes by Warren G. Harper.">
+<title>Wormy & Friends - Worm Jokes | Warren G. Harper</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="wormy-body"><div id="marqueeLights" class="marquee-lights" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="site-name" href="index.html">WARREN G. HARPER</a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav">Menu</button>
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="code.html">The Code Redeemer</a>
+    <a class="active" href="wormy.html">Worm Jokes</a>
+    <a href="discoveries.html">Discoveries</a>
+    <a href="press.html">1131 Press</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  <button id="globalSoundToggle" class="nav-button" type="button">Sound: On</button></nav>
+</header>
+<main class="wormy-world">
+<section class="wormy-hero-page"><div class="sun-doodle" aria-hidden="true">☀</div><p class="wormy-small">WELCOME TO</p><h1>WORMY &amp; FRIENDS</h1><p class="worm-jokes-title">WORM JOKES</p>
+<p class="wormy-lead">Life’s a little different when you live in a hole in the ground.</p><a class="wormy-page-button" href="#cartoons">See the Cartoons</a></section>
+<section class="wormy-about"><div><p class="wormy-small">ABOUT THE CARTOONS</p><h2>Everyday life. Ground-level perspective.</h2></div>
+<div><p>Wormy and his friends find themselves in situations involving family, work, church, sports, holidays, relationships, and just about everything else life throws at them.</p>
+<p>Sometimes Wormy is clever. Other times he is deadpan. Sometimes he is naïve. The artwork is intentionally simple, hand-drawn, and unmistakably Warren Harper’s.</p></div></section>
+<section id="cartoons" class="cartoon-gallery"><div class="gallery-heading"><p class="wormy-small">A FEW WORM JOKES</p><h2>Original drawings. Original handwriting. Original worms.</h2></div>
+<div class="cartoon-grid">
+<figure class="index-card rotate-left"><img src="assets/worm-joke-v2.jpg" alt="Worm Joke: I hate myself for loving you."><figcaption>Music, relationships, and worms.</figcaption></figure>
+<figure class="index-card rotate-right"><img src="assets/worm-sample-golf.png" alt="Original Worm Joke about golf."><figcaption>A little help, please.</figcaption></figure>
+<figure class="index-card rotate-left-small"><img src="assets/worm-sample-alphabet.png" alt="Original Worm Joke about the alphabet."><figcaption>Learning the alphabet underground.</figcaption></figure>
+<figure class="index-card rotate-right-small"><img src="assets/worm-sample-iron.png" alt="Original Worm Joke featuring an iron."><figcaption>Household hazards.</figcaption></figure>
+</div></section>
+<section class="wormy-cast"><p class="wormy-small">MEET THE CAST</p><h2>Every community has its own unique personalities.</h2>
+<div class="cast-pills"><span>Wormy</span><span>Matt</span><span>Grubby</span><span>Bernice</span><span>Grandpa</span><span>Officer</span><span>Preacher</span><span>Professor</span></div>
+<p class="cast-note">Full character introductions and more cartoons are being prepared for the site.</p></section>
+<section class="next-door wormy-next"><p>Finished laughing?</p><a href="index.html">Return to the dark homepage →</a></section>
+<section class="worm-secret-section">
+  <button id="wormHole" class="worm-hole" type="button" aria-label="A small worm hole"></button>
+  <div id="wormSecret" class="worm-secret" hidden>
+    <img src="assets/worm-found-me.jpg" alt="Wormy says Found Me!">
+  </div>
+</section>
+</main><footer class="global-footer">
+  <div>
+    <strong>Discover what’s hidden beneath the surface.</strong>
+    <span>© <span class="current-year">2026</span> Warren G. Harper</span>
+  </div>
+  <a class="press-footer" href="press.html"><span>Published by</span><strong>1131 PRESS</strong></a>
+</footer>
+<script>
+document.querySelectorAll('.current-year').forEach(el => el.textContent = new Date().getFullYear());
+const menu = document.querySelector('.menu-toggle');
+const nav = document.getElementById('mainNav');
+if (menu && nav) menu.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menu.setAttribute('aria-expanded', String(open));
+});
+</script>
+<script>
+const lightBox=document.getElementById('marqueeLights'),bulbs=[];let n=0,gap=10;
+const countX=Math.max(12,Math.floor(window.innerWidth/46)),countY=Math.max(8,Math.floor(window.innerHeight/46));
+function bulb(x,y){const b=document.createElement('i');b.style.left=x+'px';b.style.top=y+'px';lightBox.appendChild(b);bulbs.push(b);}
+for(let i=0;i<countX;i++)bulb(gap+i*(window.innerWidth-2*gap)/(countX-1),gap);
+for(let i=1;i<countY;i++)bulb(window.innerWidth-gap,gap+i*(window.innerHeight-2*gap)/(countY-1));
+for(let i=countX-2;i>=0;i--)bulb(gap+i*(window.innerWidth-2*gap)/(countX-1),window.innerHeight-gap);
+for(let i=countY-2;i>0;i--)bulb(gap,gap+i*(window.innerHeight-2*gap)/(countY-1));
+bulbs.forEach((b,i)=>b.style.animationDelay=(i*.085)+'s');
+</script>
+<div id="easterModal" class="easter-modal" hidden>
+  <div class="easter-card">
+    <button id="closeEaster" class="close-easter" type="button" aria-label="Close">×</button>
+    <div id="easterContent"></div>
+  </div>
+</div>
+<div id="luciWhisper" class="luci-whisper" aria-hidden="true">WHO IS THIS?<br>ARE YOU ONLINE?</div>
+<button id="finalDiscovery" class="final-discovery" type="button">Some things are meant to be discovered.</button>
+
+<!-- Some things are meant to be discovered. -->
+<script src="easter-eggs.js"></script>
+<script>
+const gst=document.getElementById("globalSoundToggle");
+let siteSound=localStorage.getItem("projectLaunchSound")!=="off";
+if(gst){
+  gst.textContent=`Sound: ${siteSound?"On":"Off"}`;
+  gst.addEventListener("click",()=>{
+    siteSound=!siteSound;
+    localStorage.setItem("projectLaunchSound",siteSound?"on":"off");
+    gst.textContent=`Sound: ${siteSound?"On":"Off"}`;
+  });
+}
+</script>
+</body></html>
