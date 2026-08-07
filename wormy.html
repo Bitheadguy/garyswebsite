@@ -21,24 +21,24 @@
   <button id="globalSoundToggle" class="nav-button" type="button">Sound: On</button></nav>
 </header>
 <main class="wormy-world">
-<section class="wormy-hero-page"><div class="sun-doodle" aria-hidden="true">☀</div><p class="wormy-small">WELCOME TO</p><h1>WORMY &amp; FRIENDS</h1><p class="worm-jokes-title">WORM JOKES</p>
+<section class="wormy-hero-page"><button id="sunEgg" class="sun-doodle sun-egg" type="button" aria-label="Sun">☀</button><p class="wormy-small">WELCOME TO</p><h1>WORMY &amp; FRIENDS</h1><p class="worm-jokes-title">WORM JOKES</p>
 <p class="wormy-lead">Life’s a little different when you live in a hole in the ground.</p><a class="wormy-page-button" href="#cartoons">See the Cartoons</a></section>
 <section class="wormy-about"><div><p class="wormy-small">ABOUT THE CARTOONS</p><h2>Everyday life. Ground-level perspective.</h2></div>
 <div><p>Wormy and his friends find themselves in situations involving family, work, church, sports, holidays, relationships, and just about everything else life throws at them.</p>
 <p>Sometimes Wormy is clever. Other times he is deadpan. Sometimes he is naïve. The artwork is intentionally simple, hand-drawn, and unmistakably Warren Harper’s.</p></div></section>
 <section id="cartoons" class="cartoon-gallery"><div class="gallery-heading"><p class="wormy-small">A FEW WORM JOKES</p><h2>Original drawings. Original handwriting. Original worms.</h2></div>
 <div class="cartoon-grid">
-<figure class="index-card rotate-left"><img src="assets/worm-joke-v2.jpg" alt="Worm Joke: I hate myself for loving you."><figcaption>Music, relationships, and worms.</figcaption></figure>
-<figure class="index-card rotate-right"><img src="assets/worm-sample-golf.png" alt="Original Worm Joke about golf."><figcaption>A little help, please.</figcaption></figure>
-<figure class="index-card rotate-left-small"><img src="assets/worm-sample-alphabet.png" alt="Original Worm Joke about the alphabet."><figcaption>Learning the alphabet underground.</figcaption></figure>
-<figure class="index-card rotate-right-small"><img src="assets/worm-sample-iron.png" alt="Original Worm Joke featuring an iron."><figcaption>Household hazards.</figcaption></figure>
-</div></section>
+<figure id="wormCard1" class="index-card rotate-left worm-card-interactive"><img src="assets/worm-joke-v2.jpg" alt="Worm Joke: I hate myself for loving you."><figcaption>Music, relationships, and worms.</figcaption></figure>
+<figure id="wormCard2" class="index-card rotate-right worm-card-interactive"><img src="assets/worm-sample-golf.png" alt="Original Worm Joke about golf."><figcaption>A little help, please.</figcaption></figure>
+<figure id="wormCard3" class="index-card rotate-left-small worm-card-interactive"><img src="assets/worm-sample-alphabet.png" alt="Original Worm Joke about the alphabet."><figcaption>Learning the alphabet underground.</figcaption></figure>
+<figure id="wormCard4" class="index-card rotate-right-small worm-card-interactive"><img src="assets/worm-sample-iron.png" alt="Original Worm Joke featuring an iron."><figcaption>Household hazards.</figcaption></figure>
+</div><div id="rotationMessage" class="rotation-message" aria-live="polite"></div></section>
 <section class="wormy-cast"><p class="wormy-small">MEET THE CAST</p><h2>Every community has its own unique personalities.</h2>
 <div class="cast-pills"><span>Wormy</span><span>Matt</span><span>Grubby</span><span>Bernice</span><span>Grandpa</span><span>Officer</span><span>Preacher</span><span>Professor</span></div>
 <p class="cast-note">Full character introductions and more cartoons are being prepared for the site.</p></section>
-<section class="next-door wormy-next"><p>Finished laughing?</p><a href="index.html">Return to the dark homepage →</a></section>
+<section class="next-door wormy-next"><button id="finishedLaughing" class="finished-laughing" type="button">Finished laughing?</button><a href="index.html">Return to the dark homepage →</a></section>
 <section class="worm-secret-section">
-  <button id="wormHole" class="worm-hole" type="button" aria-label="A small worm hole"></button>
+  <div class="worm-hole-row"><button id="wormHole" class="worm-hole" type="button" aria-label="A small worm hole"></button><button id="wrongWormHole" class="worm-hole wrong-hole" type="button" aria-label="Another small worm hole"></button></div><div id="wormFunMessage" class="worm-fun-message" aria-live="polite"></div>
   <div id="wormSecret" class="worm-secret" hidden>
     <img src="assets/worm-found-me.jpg" alt="Wormy says Found Me!">
   </div>

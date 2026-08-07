@@ -3,7 +3,7 @@
   const STORAGE_KEY="wghEasterEggsV131";
   const COMPLETED_KEY="wghEasterCompletedV131";
   const WINDOW_KEY="__WGH_EASTER_V131__";
-  const totals={code:6,worm:1,scripture:4};
+  const totals={code:6,worm:2,scripture:4};
 
   function defaultFound(){ return {code:[],worm:[],scripture:[]}; }
   function defaultCompleted(){ return {code:false,worm:false,scripture:false}; }
@@ -215,6 +215,54 @@
       setTimeout(()=>whisper.classList.remove("appear"),5200);
     },6500+Math.random()*3500);
   }
+
+
+  // Wormy page playful interactions
+  const finished=document.getElementById("finishedLaughing");
+  finished?.addEventListener("click",()=>{
+    discover("worm","finished-laughing");
+    finished.textContent="HA!";
+    setTimeout(()=>finished.textContent="Finished laughing?",3000);
+  });
+
+  const wrongHole=document.getElementById("wrongWormHole");
+  const wormFun=document.getElementById("wormFunMessage");
+  wrongHole?.addEventListener("click",()=>{
+    if(!wormFun)return;
+    wormFun.textContent="WRONG HOLE. TRY AGAIN!";
+    wormFun.classList.add("show");
+    setTimeout(()=>{wormFun.classList.remove("show");wormFun.textContent="";},2800);
+  });
+
+  document.getElementById("sunEgg")?.addEventListener("click",()=>{
+    if(!wormFun)return;
+    wormFun.textContent="HAVE A SUN SHINY DAY!";
+    wormFun.classList.add("show","sunny");
+    setTimeout(()=>{wormFun.classList.remove("show","sunny");wormFun.textContent="";},3000);
+  });
+
+  const grid=document.querySelector(".cartoon-grid");
+  const card1=document.getElementById("wormCard1");
+  const card2=document.getElementById("wormCard2");
+  const rotationMessage=document.getElementById("rotationMessage");
+  let rotationClicks=0;
+
+  function rotateCards(dir){
+    if(!grid)return;
+    const cards=[...grid.querySelectorAll(".worm-card-interactive")];
+    if(cards.length!==4)return;
+    const order=dir==="cw" ? [cards[2],cards[0],cards[3],cards[1]] : [cards[1],cards[3],cards[0],cards[2]];
+    order.forEach(c=>grid.appendChild(c));
+    rotationClicks++;
+    grid.classList.remove("grid-shuffle"); void grid.offsetWidth; grid.classList.add("grid-shuffle");
+    if(rotationClicks===12 && rotationMessage){
+      rotationMessage.textContent="You're still doing this?";
+      rotationMessage.classList.add("show");
+      setTimeout(()=>rotationMessage.classList.remove("show"),3000);
+    }
+  }
+  card2?.addEventListener("click",()=>rotateCards("cw"));
+  card1?.addEventListener("click",()=>rotateCards("ccw"));
 
   updateTracker();
 })();

@@ -828,3 +828,16 @@ body{overflow-x:hidden}.page-kicker{margin:0 0 14px;font-family:Arial,sans-serif
     min-width:0!important;
   }
 }
+
+/* v1.3.2 Wormy interactions */
+.sun-egg{border:0!important;background:none!important;cursor:pointer!important;padding:0!important}
+.sun-egg:hover{transform:rotate(8deg) scale(1.04)!important}
+.worm-hole-row{display:flex;gap:80px;justify-content:center;align-items:center;flex-wrap:wrap}
+.wrong-hole{transform:scale(.94)} .wrong-hole:hover{transform:scale(1.03)!important}
+.worm-fun-message,.rotation-message{min-height:28px;margin-top:22px;text-align:center;font-family:"Courier New",monospace;font-weight:700;color:#164d78;opacity:0;transform:translateY(6px);transition:.25s ease}
+.worm-fun-message.show,.rotation-message.show{opacity:1;transform:none}.worm-fun-message.sunny{color:#d4741b}
+.finished-laughing{border:0;background:none;color:inherit;font:inherit;padding:0;cursor:pointer}.finished-laughing:hover{text-decoration:underline}
+.worm-card-interactive{cursor:pointer;transition:transform .28s ease,box-shadow .28s ease}
+.cartoon-grid.grid-shuffle .worm-card-interactive{animation:wormCardShuffle .32s ease}
+@keyframes wormCardShuffle{0%{transform:translateY(0)}45%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+@media(max-width:650px){.worm-hole-row{gap:40px}}
