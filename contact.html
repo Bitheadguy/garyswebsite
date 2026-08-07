@@ -17,7 +17,7 @@
     <a href="press.html">1131 Press</a>
     <a href="about.html">About</a>
     <a class="active" href="contact.html">Contact</a>
-  <button id="globalSoundToggle" class="nav-button" type="button">Sound: On</button></nav>
+  <button id="globalSoundToggle" class="nav-button" type="button">Sound: On</button><button id="eggTrackerButton" class="egg-nav-link" type="button">EASTER EGGS</button></nav>
 </header>
 <main><section class="contact-page"><p class="page-kicker red">CONTACT</p><h1>Professional<br>Inquiries</h1>
 <p class="contact-lead">For literary representation, publishing, rights, media, or other professional correspondence.</p>
@@ -41,6 +41,23 @@ if (menu && nav) menu.addEventListener('click', () => {
   menu.setAttribute('aria-expanded', String(open));
 });
 </script>
+
+<div id="eggTracker" class="egg-tracker" hidden>
+  <div class="egg-tracker-card">
+    <button id="closeEggTracker" class="close-egg-tracker" type="button" aria-label="Close">×</button>
+    <p class="egg-tracker-kicker">EASTER EGGS</p>
+    <h2>Hidden Things Found</h2>
+    <div class="egg-progress-group"><div class="egg-progress-label"><span>THE CODE REDEEMER</span><span class="egg-count" data-count="code">No discoveries yet</span></div><div class="egg-progress"><i data-bar="code"></i></div></div>
+    <div class="egg-progress-group"><div class="egg-progress-label"><span>WORM JOKES</span><span class="egg-count" data-count="worm">No discoveries yet</span></div><div class="egg-progress"><i data-bar="worm"></i></div></div>
+    <div class="egg-progress-group"><div class="egg-progress-label"><span>DISCOVERIES</span><span class="egg-count" data-count="scripture">No discoveries yet</span></div><div class="egg-progress"><i data-bar="scripture"></i></div></div>
+  </div>
+</div>
+<div id="completionMessage" class="completion-message" hidden>
+  <strong>You found them all!</strong>
+  <span>Every hidden item in this section has been discovered.</span>
+</div>
+<div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+
 <div id="easterModal" class="easter-modal" hidden>
   <div class="easter-card">
     <button id="closeEaster" class="close-easter" type="button" aria-label="Close">×</button>

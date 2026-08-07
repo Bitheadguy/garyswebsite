@@ -1,17 +1,14 @@
-# Project Launch 1.2 — Launch Candidate
+# Project Launch 1.3.1
 
-Included:
-- Final homepage, project pages, About, Contact, Discoveries and 1131 PRESS
-- Public email: Warren.G.Harper.author@gmail.com
-- U.S. Army Corps of Engineers removed from About
-- Rebalanced 1131 PRESS logo
-- Improved placeholder audio
-- Persistent sound preference
-- Easter eggs and final naming
-
-To preview:
-Open index.html.
-
-To launch:
-Upload the entire project-launch-v1.2 folder to a static host such as GitHub Pages.
-The included CNAME file is set to warrengharper.com.
+Fixes over v1.3:
+- EASTER EGGS now appears in the top navigation on every page
+- Progress is stored in localStorage for the live site
+- Progress is also mirrored to window.name so local file:// navigation in the same browser tab keeps counts during testing
+- Duplicate Easter egg clicks do not increase counts
+- NR-GN22-13 is easier to notice
+- Restricted terminal is visibly discoverable and shows < SYS: >
+- SON / Son / son still reveals ADONAI
+- LUCI whisper now appears in its own terminal-style box, never over page text
+- LUCI stays visible longer and counts only when clicked
+- Hidden-in-plain-sight sentence now gives visible feedback when clicked
+- Existing section completion confetti, sound, and temporary message retained
