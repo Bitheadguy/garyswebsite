@@ -6,3 +6,10 @@
 - Upper-right sample cartoon rotates all four clockwise
 - Upper-left sample cartoon rotates all four counterclockwise
 - After 12 total rotation clicks -> You're still doing this? for 3 seconds
+
+
+## v1.3.3
+- Converted the four Worm sample cartoon positions to permanent, replaceable image slots.
+- Slot files are assets/worm-sample-1.png through assets/worm-sample-4.png.
+- A single sample cartoon can now be changed in GitHub by replacing only its slot image; no full-site upload is needed.
+- Existing clockwise/counterclockwise cartoon movement remains compatible with the slot system.

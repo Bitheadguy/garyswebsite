@@ -1,0 +1,21 @@
+HOW TO CHANGE THE 4 SAMPLE WORM CARTOONS
+
+The four sample positions now use permanent filenames:
+
+  assets/worm-sample-1.png   top-left starting position
+  assets/worm-sample-2.png   top-right starting position
+  assets/worm-sample-3.png   bottom-left starting position
+  assets/worm-sample-4.png   bottom-right starting position
+
+To change one cartoon later, you do NOT need to download or re-upload the full website.
+
+In GitHub:
+1. Open the garyswebsite repository.
+2. Open the assets folder.
+3. Delete the old slot image you want to replace (for example worm-sample-2.png).
+4. Upload your new cartoon using EXACTLY the same filename: worm-sample-2.png.
+5. Commit the change.
+
+The webpage and the clockwise/counterclockwise rotation feature will continue working automatically because the HTML always points to these four permanent slot names.
+
+IMPORTANT: Keep the replacement as a PNG and keep the exact slot filename.
