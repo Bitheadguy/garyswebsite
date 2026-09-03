@@ -13,3 +13,11 @@
 - Slot files are assets/worm-sample-1.png through assets/worm-sample-4.png.
 - A single sample cartoon can now be changed in GitHub by replacing only its slot image; no full-site upload is needed.
 - Existing clockwise/counterclockwise cartoon movement remains compatible with the slot system.
+
+
+## v1.3.4
+- Fixed Worm sample-cartoon rotation to move around the 2x2 perimeter: 1→2→3→4→1 clockwise, and the reverse counterclockwise.
+
+
+## v1.3.4a
+- Corrected visible NOVELS capitalization to Novels so it matches the capitalization style of the neighboring category labels.

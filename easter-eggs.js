@@ -251,10 +251,21 @@
     if(!grid)return;
     const cards=[...grid.querySelectorAll(".worm-card-interactive")];
     if(cards.length!==4)return;
-    const order=dir==="cw" ? [cards[2],cards[0],cards[3],cards[1]] : [cards[1],cards[3],cards[0],cards[2]];
+
+    // Visual positions in the 2x2 gallery:
+    // 0 = top-left, 1 = top-right, 2 = bottom-left, 3 = bottom-right
+    // Clockwise path: TL -> TR -> BR -> BL -> TL
+    const order = dir==="cw"
+      ? [cards[2], cards[0], cards[3], cards[1]]
+      : [cards[1], cards[3], cards[0], cards[2]];
+
     order.forEach(c=>grid.appendChild(c));
+
     rotationClicks++;
-    grid.classList.remove("grid-shuffle"); void grid.offsetWidth; grid.classList.add("grid-shuffle");
+    grid.classList.remove("grid-shuffle");
+    void grid.offsetWidth;
+    grid.classList.add("grid-shuffle");
+
     if(rotationClicks===12 && rotationMessage){
       rotationMessage.textContent="You're still doing this?";
       rotationMessage.classList.add("show");
