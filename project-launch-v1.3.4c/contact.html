@@ -1,0 +1,84 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Professional contact information for Warren G. Harper.">
+<title>Contact | Warren G. Harper</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="contact-body"><header class="site-header">
+  <a class="site-name" href="index.html">WARREN G. HARPER</a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav">Menu</button>
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="code.html">The Code Redeemer</a>
+    <a href="wormy.html">Worm Jokes</a>
+    <a href="discoveries.html">Discoveries</a>
+    <a href="press.html">1131 Press</a>
+    <a href="about.html">About</a>
+    <a class="active" href="contact.html">Contact</a>
+  <button id="globalSoundToggle" class="nav-button" type="button">Sound: On</button><button id="eggTrackerButton" class="egg-nav-link" type="button">EASTER EGGS</button></nav>
+</header>
+<main><section class="contact-page"><p class="page-kicker red">CONTACT</p><h1>Professional<br>Inquiries</h1>
+<p class="contact-lead">For literary representation, publishing, rights, media, or other professional correspondence.</p>
+<div class="contact-card">
+      <p>Email Warren G. Harper for literary representation, publishing, rights, media, or professional correspondence.</p>
+      <a class="contact-email" href="mailto:Warren.G.Harper.author@gmail.com">Warren.G.Harper.author@gmail.com</a>
+    </div>
+</section></main><footer class="global-footer">
+  <div>
+    <strong>Discover what’s hidden beneath the surface.</strong>
+    <span>© <span class="current-year">2026</span> Warren G. Harper</span>
+  </div>
+  <a class="press-footer" href="press.html"><span>Published by</span><strong>1131 PRESS</strong></a>
+</footer>
+<script>
+document.querySelectorAll('.current-year').forEach(el => el.textContent = new Date().getFullYear());
+const menu = document.querySelector('.menu-toggle');
+const nav = document.getElementById('mainNav');
+if (menu && nav) menu.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menu.setAttribute('aria-expanded', String(open));
+});
+</script>
+
+<div id="eggTracker" class="egg-tracker" hidden>
+  <div class="egg-tracker-card">
+    <button id="closeEggTracker" class="close-egg-tracker" type="button" aria-label="Close">×</button>
+    <p class="egg-tracker-kicker">EASTER EGGS</p>
+    <h2>Hidden Things Found</h2>
+    <div class="egg-progress-group"><div class="egg-progress-label"><span>THE CODE REDEEMER</span><span class="egg-count" data-count="code">No discoveries yet</span></div><div class="egg-progress"><i data-bar="code"></i></div></div>
+    <div class="egg-progress-group"><div class="egg-progress-label"><span>WORM JOKES</span><span class="egg-count" data-count="worm">No discoveries yet</span></div><div class="egg-progress"><i data-bar="worm"></i></div></div>
+    <div class="egg-progress-group"><div class="egg-progress-label"><span>DISCOVERIES</span><span class="egg-count" data-count="scripture">No discoveries yet</span></div><div class="egg-progress"><i data-bar="scripture"></i></div></div>
+  </div>
+</div>
+<div id="completionMessage" class="completion-message" hidden>
+  <strong>You found them all!</strong>
+  <span>Every hidden item in this section has been discovered.</span>
+</div>
+<div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+
+<div id="easterModal" class="easter-modal" hidden>
+  <div class="easter-card">
+    <button id="closeEaster" class="close-easter" type="button" aria-label="Close">×</button>
+    <div id="easterContent"></div>
+  </div>
+</div>
+<div id="luciWhisper" class="luci-whisper" aria-hidden="true">WHO IS THIS?<br>ARE YOU ONLINE?</div>
+<button id="finalDiscovery" class="final-discovery" type="button">Some things are meant to be discovered.</button>
+
+<!-- Some things are meant to be discovered. -->
+<script src="easter-eggs.js"></script>
+<script>
+const gst=document.getElementById("globalSoundToggle");
+let siteSound=localStorage.getItem("projectLaunchSound")!=="off";
+if(gst){
+  gst.textContent=`Sound: ${siteSound?"On":"Off"}`;
+  gst.addEventListener("click",()=>{
+    siteSound=!siteSound;
+    localStorage.setItem("projectLaunchSound",siteSound?"on":"off");
+    gst.textContent=`Sound: ${siteSound?"On":"Off"}`;
+  });
+}
+</script>
+</body></html>

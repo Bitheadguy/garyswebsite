@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Warren G. Harper — The Code Redeemer, Wormy & Friends, and Discoveries.">
+  <title>Warren G. Harper</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="home-page">
+  <div id="intro" class="intro" aria-hidden="false">
+    <button id="skipIntro" class="skip-intro" type="button">Skip Intro</button>
+
+    <section id="entryChoice" class="entry-choice">
+      <p>PROJECT LAUNCH · INTRO APPROX. 29 SECONDS</p>
+      <h1>Warren G. Harper</h1>
+      <div class="entry-buttons">
+        <button id="enterSound" class="outline-button" type="button">Enter with Sound</button>
+        <button id="enterSilent" class="text-button" type="button">Enter Silently</button>
+      </div>
+      <small>Sound starts only after you tap, as required by iPhone and modern browsers.</small>
+    </section>
+
+    <section id="terminalScene" class="intro-scene terminal-scene">
+      <div class="terminal-copy" aria-live="polite">
+        <p id="systemPromptOne" class="system-prompt">&lt; SYS: &gt;</p>
+        <p id="terminalQuestion"></p>
+        <p id="systemPromptTwo" class="system-prompt second-prompt">&lt; SYS: &gt;</p>
+        <p id="terminalAnswer"></p>
+      </div>
+    </section>
+
+    <section id="codeScene" class="intro-scene code-scene">
+      <div class="circuit-field"></div>
+      <div class="code-title">
+        <span>THE CODE</span>
+        <strong>REDEEMER</strong>
+      </div>
+    </section>
+
+    <section id="wormyScene" class="intro-scene wormy-scene">
+      <div class="paper-card">
+        <p class="intro-label">A LITTLE LAUGHTER</p>
+        <h2>WORMY &amp; FRIENDS</h2><p class="worm-jokes-label">WORM JOKES</p>
+        <img src="assets/worm-joke-v2.jpg" alt="Warren Harper’s original hand-drawn Worm Joke: I hate myself for loving you.">
+      </div>
+    </section>
+
+    <section id="insightsScene" class="intro-scene insights-scene">
+      <div class="insights-glow"></div>
+      <p class="intro-label">TRUTH HIDING IN PLAIN SIGHT</p>
+      <h2>BIBLICAL<br>DISCOVERIES</h2>
+    </section>
+    <audio id="terminalAudio" preload="auto" src="assets/audio/terminal.wav"></audio>
+    <audio id="glitchAudio" preload="auto" src="assets/audio/glitch.wav"></audio>
+    <audio id="codeAudio" preload="auto" src="assets/audio/code.wav"></audio>
+    <audio id="wormyAudio" preload="auto" src="assets/audio/wormy.wav"></audio>
+    <audio id="insightsAudio" preload="auto" src="assets/audio/insights.wav"></audio>
+  </div>
+
+  <header class="site-header">
+  <a class="site-name" href="index.html">WARREN G. HARPER</a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav">Menu</button>
+  <nav id="mainNav">
+    <a class="active" href="index.html">Home</a>
+    <a href="code.html">The Code Redeemer</a>
+    <a href="wormy.html">Worm Jokes</a>
+    <a href="discoveries.html">Discoveries</a>
+    <a href="press.html">1131 Press</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a><button id="eggTrackerButton" class="egg-nav-link" type="button">EASTER EGGS</button><button id="tier7Link" class="tier7-link" type="button">TIER 7</button>
+  <button id="watchIntro" class="nav-button" type="button">Watch Intro</button><button id="soundToggle" class="nav-button" type="button" aria-pressed="true">Sound: On</button></nav>
+</header>
+
+  <main id="homepage" class="homepage">
+    <section class="home-hero">
+      <div class="cover-echo" aria-hidden="true"></div>
+      <div class="home-vignette" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <p class="eyebrow">WARREN G. HARPER</p>
+        <h1>Discover what’s hidden beneath the surface.</h1>
+        <p class="hero-sub">Novels. Humor. Insights.</p>
+        <a class="primary-link" href="#choose">Explore My Work</a>
+      </div>
+    </section>
+
+    <section id="choose" class="choice-section">
+      <div class="choice-intro choice-intro-strong">
+        <p class="choice-command">Where would you like to begin?</p>
+        <p>Choose one of Warren Harper’s three creative worlds.</p>
+      </div>
+
+      <div class="choice-list">
+        <a class="choice code-choice" href="code.html">
+          <span class="choice-number">01</span>
+          <div class="choice-copy">
+            <p class="choice-kicker">A NEAR-FUTURE THRILLER</p>
+            <h2>The Code Redeemer</h2><p class="world-label">A novel</p>
+            <p>Artificial intelligence. Obedience. Freedom. A hidden code buried inside the system.</p>
+          </div>
+          <span class="choice-arrow">Enter →</span>
+        </a>
+
+        <a class="choice wormy-choice" href="wormy.html">
+          <span class="choice-number">02</span>
+          <div class="choice-copy">
+            <p class="choice-kicker">SINGLE-PANEL CARTOONS</p>
+            <h2>Wormy &amp; Friends</h2>
+            <p class="worm-jokes-home">Worm Jokes</p><p class="world-label">A laugh</p>
+            <p>Life looks different from ground level.</p>
+          </div>
+          <span class="choice-arrow">Enter →</span>
+        </a>
+
+        <a class="choice insights-choice" href="discoveries.html">
+          <span class="choice-number">03</span>
+          <div class="choice-copy">
+            <p class="choice-kicker">A DEVELOPING DEVOTIONAL</p>
+            <h2>Discoveries</h2><p class="world-label">Dig Deeper</p>
+          </div>
+          <span class="choice-arrow">Enter →</span>
+        </a>
+      </div>
+    </section>
+<button id="differentSquare" class="different-square" type="button" aria-label="A slightly different square"></button>
+<button id="hiddenNrCode" class="hidden-code" type="button">NR-GN22-13</button>
+
+<section class="home-about">
+      <div>
+        <p class="eyebrow">ABOUT THE CREATOR</p>
+        <h2>Engineer. Novelist. Cartoonist. Observer.</h2>
+      </div>
+      <div>
+        <p>Warren G. Harper creates stories, humor, and biblical insights that invite readers to look beneath the obvious and discover what others may have missed.</p>
+        <a class="secondary-link" href="about.html">Meet Warren →</a>
+      </div>
+    </section>
+
+    <section class="home-actions">
+      <a href="code.html">The Code Redeemer</a>
+      <a href="wormy.html">Worm Jokes</a>
+      <a href="discoveries.html">Discoveries</a>
+      <a href="press.html">1131 Press</a>
+      <button id="watchIntroBottom" type="button">Watch Intro Again</button>
+    </section>
+  </main>
+
+  <footer class="global-footer">
+  <div><strong>Discover what’s hidden beneath the surface.</strong><span>© <span id="year"></span> Warren G. Harper</span></div>
+  <a class="press-footer" href="press.html"><span>Published by</span><strong>1131 PRESS</strong></a>
+</footer>
+
+
+<div id="eggTracker" class="egg-tracker" hidden>
+  <div class="egg-tracker-card">
+    <button id="closeEggTracker" class="close-egg-tracker" type="button" aria-label="Close">×</button>
+    <p class="egg-tracker-kicker">EASTER EGGS</p>
+    <h2>Hidden Things Found</h2>
+    <div class="egg-progress-group"><div class="egg-progress-label"><span>THE CODE REDEEMER</span><span class="egg-count" data-count="code">No discoveries yet</span></div><div class="egg-progress"><i data-bar="code"></i></div></div>
+    <div class="egg-progress-group"><div class="egg-progress-label"><span>WORM JOKES</span><span class="egg-count" data-count="worm">No discoveries yet</span></div><div class="egg-progress"><i data-bar="worm"></i></div></div>
+    <div class="egg-progress-group"><div class="egg-progress-label"><span>DISCOVERIES</span><span class="egg-count" data-count="scripture">No discoveries yet</span></div><div class="egg-progress"><i data-bar="scripture"></i></div></div>
+  </div>
+</div>
+<div id="completionMessage" class="completion-message" hidden>
+  <strong>You found them all!</strong>
+  <span>Every hidden item in this section has been discovered.</span>
+</div>
+<div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+
+<div id="easterModal" class="easter-modal" hidden>
+  <div class="easter-card">
+    <button id="closeEaster" class="close-easter" type="button" aria-label="Close">×</button>
+    <div id="easterContent"></div>
+  </div>
+</div>
+<div id="luciWhisper" class="luci-whisper" aria-hidden="true">WHO IS THIS?<br>ARE YOU ONLINE?</div>
+<button id="finalDiscovery" class="final-discovery" type="button">Some things are meant to be discovered.</button>
+
+<!-- Some things are meant to be discovered. -->
+<script src="easter-eggs.js"></script>
+</body>
+</html>
