@@ -21,3 +21,9 @@
 
 ## v1.3.4a
 - Corrected visible NOVELS capitalization to Novels so it matches the capitalization style of the neighboring category labels.
+
+
+## v1.3.4b
+- Fixed the actual Worm rotation bug: clockwise/counterclockwise controls now follow the current top-right and top-left POSITIONS, rather than staying attached to the original cartoons.
+- Repeatedly clicking the current top-right cartoon now keeps rotating clockwise every time.
+- Repeatedly clicking the current top-left cartoon now keeps rotating counterclockwise every time.

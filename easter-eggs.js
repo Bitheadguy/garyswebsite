@@ -242,8 +242,6 @@
   });
 
   const grid=document.querySelector(".cartoon-grid");
-  const card1=document.getElementById("wormCard1");
-  const card2=document.getElementById("wormCard2");
   const rotationMessage=document.getElementById("rotationMessage");
   let rotationClicks=0;
 
@@ -272,8 +270,22 @@
       setTimeout(()=>rotationMessage.classList.remove("show"),3000);
     }
   }
-  card2?.addEventListener("click",()=>rotateCards("cw"));
-  card1?.addEventListener("click",()=>rotateCards("ccw"));
+  // The controls belong to the POSITIONS, not to a particular cartoon.
+  // Whatever cartoon is currently top-right rotates the gallery clockwise.
+  // Whatever cartoon is currently top-left rotates it counterclockwise.
+  grid?.addEventListener("click",(event)=>{
+    const clicked=event.target.closest(".worm-card-interactive");
+    if(!clicked || !grid.contains(clicked)) return;
+
+    const cards=[...grid.querySelectorAll(".worm-card-interactive")];
+    const position=cards.indexOf(clicked);
+
+    if(position===1){
+      rotateCards("cw");       // current top-right
+    }else if(position===0){
+      rotateCards("ccw");      // current top-left
+    }
+  });
 
   updateTracker();
 })();
